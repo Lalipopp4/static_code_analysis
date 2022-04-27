@@ -1,0 +1,10 @@
+#include <iostream>
+#include <cctype>
+
+int main(){
+	int val1 = 0;
+	int val2 = 5;
+	val3 = val1 + val2;
+	cout << val3;
+	return 0;
+}
