@@ -17,12 +17,14 @@ int main() {
 	cin >> file_name;
 	ifstream file;
 	file.open(file_name, ios::in);
+	// если файл не открылся, н-р его не существует
 	if (!file){
 		cout << "Error";
 		return -1;
 	}
 
 	// объявление стека и переменных
+	// в стеке хранятся встреченные скобки 
 	stack <Bracket> bracket_stack;
 	char cur, prev;
 	string word, word_clear;
@@ -69,10 +71,11 @@ int main() {
 	}
 
 	// если в стеке остались скобки, т.е. какие то не закрылись парой, то ошибка
-	
+	file.close();
+	// проверка стека
 	if (bracket_check(bracket_stack)) return -1;
 	
-	file.close();
+	//
 	cout << "Exit code 0\n";
 	cout << ">>No errors found<<\n";
 	return 0;
