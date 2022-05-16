@@ -9,12 +9,14 @@
 // и направлением
 class Bracket {
 
+// 	в private хранятся информация о классе, защищено от изменений
 private:
 
 	unsigned int type;
 	bool direction;
 	unsigned int position;
-
+	
+//	в public находятся методы класса
 public:
 
 	Bracket(unsigned int t, bool d, unsigned int p);
@@ -27,6 +29,7 @@ public:
 
 };
 
+//	функции из tools.cpp, которые используются в main.cpp 
 void bracket_tool(std::stack<Bracket>* bracket_stack, char cur, int str);
 
 bool word_check(std::string word, std::string word_clear, int str);
