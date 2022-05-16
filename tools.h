@@ -12,8 +12,11 @@ class Bracket {
 // 	в private хранятся информация о классе, защищено от изменений
 private:
 
+// 	unsigned int так как значения могут быть 0, 1 и 2, то есть целое положительное число
 	unsigned int type;
+// 	bool так как 0 или 1
 	bool direction;
+// 	unsigned int так как значение это номер строки, то есть целое положительное число
 	unsigned int position;
 	
 //	в public находятся методы класса
